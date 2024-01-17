@@ -1,0 +1,160 @@
+@import "mixins";
+
+.product_section {
+  background-color: #ED7B49;
+  padding-top: 73px;
+  padding-bottom: 177px;
+
+  @include max-screen(550px) {
+    padding-top: 53px;
+    padding-bottom: 50px;
+  }
+
+  .product_content {
+    margin-bottom: 61px;
+
+    @include max-screen(800px) {
+     display: grid;
+    }
+  }
+
+  .product_icon {
+    margin-left: 123px;
+    margin-right: 111px;
+
+    @include max-screen(1200px) {
+      margin: auto;
+    }
+    @include max-screen(800px) {
+      padding-bottom: 20px;
+    }
+
+    img{
+      @include max-screen(550px) {
+        width: 181px;
+        height: 181px;
+      }
+    }
+  }
+
+  .product_text {
+    margin-top: 74px;
+    padding: 0 15px;
+    max-width: 506px;
+
+    @include max-screen(800px) {
+      margin: auto;
+      text-align: center;
+    }
+
+    h3 {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 85px;
+      font-weight: 700;
+      line-height: 93.5px;
+      margin-bottom: 12px;
+
+      @include max-screen(950px) {
+        font-size: 65px;
+        line-height: 73px;
+      }
+
+      @include max-screen(480px) {
+        font-size: 45px;
+        line-height: 53px;
+      }
+    }
+
+    p {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      @include max-screen(480px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+
+  }
+
+  .product_slider {
+    justify-content: center;
+
+    .product_cart {
+      margin-left: 31px;
+      margin-right: 31px;
+      position: relative;
+
+      &:nth-child(odd) {
+        margin-top: 140px;
+      }
+
+      .cart_text {
+        position: absolute;
+        //bottom: 63px;
+        top: 422px;
+
+        h4 {
+          margin-bottom: 3px;
+          @include roboto_font;
+          color: $main_color;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 42.12px;
+        }
+
+        p {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 31.5px;
+        }
+      }
+
+      button {
+        margin-top: 32px;
+        margin-left: 13px;
+        border-radius: 36px;
+        padding: 11px 47px;
+        @include roboto_font;
+        color: $main_color;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        text-transform: uppercase;
+        border: none;
+      }
+
+      .green {
+        background-color: #72A080;
+
+        &:hover {
+          background-color: #4e7358;
+        }
+      }
+
+      .brown {
+        background-color: #A95D50;
+
+        &:hover {
+          background-color: #6b3c33;
+        }
+      }
+
+      .lavender {
+        background-color: #ABAFD6;
+
+        &:hover {
+          background-color: #6b6f96;
+        }
+      }
+    }
+  }
+
+}

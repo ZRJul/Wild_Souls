@@ -1,0 +1,188 @@
+@import "mixins";
+
+.halva_section {
+  background-color: #F5AFB9;
+
+  @include max-screen(1030px) {
+    flex-wrap: wrap;
+  }
+
+  .halva_content {
+    border-radius: 0 220px 0 0;
+    background-color: #ABAFD6;
+    max-width: 815px;
+    padding-top: 94px;
+    padding-bottom: 74px;
+
+    @include max-screen(1030px) {
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      margin-left: 165px;
+      @include roboto_font;
+      color: $main_color;
+      font-size: 85px;
+      font-weight: 700;
+      line-height: 93.5px;
+      margin-bottom: 45px;
+
+      @include max-screen(1300px) {
+        margin-left: 100px;
+      }
+
+      @include max-screen(950px) {
+        font-size: 65px;
+        line-height: 73px;
+      }
+
+      @include max-screen(656px) {
+        margin-left: 20px;
+      }
+
+      @include max-screen(480px) {
+        font-size: 45px;
+        line-height: 53px;
+      }
+    }
+
+    .halva_photo {
+      margin-left: 150px;
+
+      @include max-screen(1300px) {
+        margin-left: 85px;
+      }
+
+      @include max-screen(656px) {
+        margin-left: 20px;
+      }
+
+      @include max-screen(565px) {
+        flex-wrap: wrap;
+      }
+
+      .halva_photo_text {
+        padding-left: 15px;
+        width: 332px;
+
+        @include max-screen(565px) {
+          order: 2;
+          margin: auto;
+        }
+
+        h4 {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 42px;
+          font-weight: 700;
+          line-height: 50.4px;
+          margin-bottom: 62px;
+        }
+
+        p {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          max-width: 245px;
+          margin-bottom: 20px;
+        }
+
+        h5 {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 21px;
+          font-weight: 400;
+          line-height: 31.5px;
+          margin-bottom: 46px;
+        }
+
+        a {
+          @include roboto_font;
+          color: #FFF;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 30px;
+          text-decoration: none;
+          background-color: #000;
+          border-radius: 40px;
+          padding: 10px 62px;
+
+          @include max-screen(590px) {
+            padding: 10px 22px;
+          }
+        }
+      }
+
+      .halva_photo_img {
+        max-width: 350px;
+        z-index: 2;
+
+        @include max-screen(565px) {
+          order: 1;
+          margin: auto;
+        }
+
+        @include max-screen(400px) {
+          width: 300px;
+        }
+
+        .img_halva {
+          width: 100%;
+
+          @include max-screen(565px) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .halva_description {
+    background-color: #EC4844;
+    margin-left: 15px;
+    padding-top: 65px;
+    max-width: 445px;
+
+    @include max-screen(1030px) {
+      margin: auto;
+      padding-bottom: 50px;
+    }
+
+    h4{
+      @include roboto_font;
+      color: $main_color;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 50.4px;
+      margin-top: 39px;
+      margin-bottom: 46px;
+      padding: 0 58px;
+
+      @include screen(1030px, 1210px) {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+        padding: 0 38px;
+      }
+    }
+
+    a{
+      border-radius: 40px;
+      background-color: #000;
+      text-decoration: none;
+      @include roboto_font;
+      color: #FFF;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      padding: 22px 72px;
+
+      @include screen(1030px, 1140px) {
+        padding: 12px 32px;
+      }
+    }
+
+  }
+}

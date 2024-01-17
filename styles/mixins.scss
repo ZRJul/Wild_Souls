@@ -1,0 +1,28 @@
+@mixin roboto_font{
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
+$main_color:#000;
+
+@mixin max-screen($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin screen($min, $max)
+{
+  @media screen and (min-width: $min) and (max-width: $max)
+  {
+    @content;
+  }
+}
+
+@mixin min-screen($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}

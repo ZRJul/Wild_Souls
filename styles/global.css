@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.text_centre {
+  text-align: center;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.aline_centre {
+  align-items: center;
+}
+
+/*# sourceMappingURL=global.css.map */

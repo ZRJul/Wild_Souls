@@ -1,0 +1,228 @@
+@import "mixins";
+
+footer {
+  background-color: #BE5A4B;
+  padding-top: 135px;
+  padding-bottom: 38px;
+
+  @include max-screen(767px) {
+    padding-top: 50px;
+  }
+
+
+  .footer_logo {
+    margin-bottom: 116px;
+
+    @include max-screen(767px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .container {
+    padding-bottom: 70px;
+
+    @include max-screen(995px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .social {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 475px;
+    margin-right: 95px;
+
+    @include max-screen(1135px) {
+      margin-right: 55px;
+    }
+
+    @include max-screen(995px) {
+      margin: auto;
+      padding-bottom: 50px;
+    }
+
+    h4 {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 85px;
+      font-weight: 700;
+      line-height: 93.5px;
+      margin-bottom: 21px;
+
+      @include max-screen(950px) {
+        font-size: 65px;
+        line-height: 73px;
+      }
+
+      @include max-screen(767px) {
+        display: none;
+      }
+    }
+
+    .footer_form {
+      padding-top: 24px;
+      margin-bottom: 60px;
+
+      @include max-screen(767px) {
+        display: none;
+      }
+
+      p {
+        @include roboto_font;
+        color: $main_color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 6px;
+      }
+
+      form {
+        max-width: 445px;
+        border-top: #000 solid 1px;
+
+        input {
+          width: 100%;
+          background-color: #BE5A4B;
+          border-style: none;
+          height: 53px;
+        }
+      }
+    }
+
+    .footer_follow {
+      margin-bottom: 74px;
+
+      @include max-screen(995px) {
+        display: flex;
+        margin-bottom: 24px;
+      }
+
+      h5 {
+        @include roboto_font;
+        color: $main_color;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 38.4px;
+        margin-bottom: 21px;
+
+        @include max-screen(995px) {
+          margin-right: 100px;
+        }
+      }
+
+      ul {
+        list-style: none;
+        gap: 18px;
+      }
+    }
+
+    .footer_pay {
+      margin-bottom: 20px;
+
+      ul {
+        list-style: none;
+        gap: 14px;
+      }
+    }
+
+    .footer_about {
+      .footer_by {
+        @include roboto_font;
+        color: $main_color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .footer_menu {
+    @include max-screen(995px) {
+      margin: auto;
+    }
+  }
+
+  .footer_nav {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 285px;
+
+    @include max-screen(480px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    @include max-screen(1135px) {
+      width: 235px;
+    }
+
+    @include max-screen(480px) {
+      width: 180px;
+    }
+
+    h4 {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38.4px;
+      margin-bottom: 21px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 21px;
+
+        a {
+          text-decoration: none;
+          @include roboto_font;
+          color: $main_color;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    p {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .footer_nav_products, .footer_nav_help {
+      margin-bottom: 60px;
+    }
+
+    .footer_nav_contact {
+      p {
+        &:first-of-type {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .footer_nav_company {
+      margin-bottom: 60px;
+    }
+  }
+
+  .footer_bottom {
+    margin-left: 5px;
+
+    .footer_bottom_img_box {
+      margin-right: 117px;
+      gap: 117px;
+      align-items: center;
+    }
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+}

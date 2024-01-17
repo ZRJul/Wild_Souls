@@ -1,0 +1,68 @@
+@import "mixins";
+
+.comments {
+  background-color: #E9A8C6;
+  padding-top: 154px;
+  padding-bottom: 147px;
+  position: relative;
+
+  .comments_title {
+    width: 103px;
+    position: absolute;
+    top: 128px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    h5 {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 25.2px;
+      text-transform: uppercase;
+    }
+
+    @include max-screen(686px) {
+      top: 80px;
+    }
+
+  }
+
+  .comments_content {
+    justify-content: space-around;
+
+    @include max-screen(710px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .comments_cart {
+
+    @include max-screen(686px) {
+      margin-top: 50px;
+    }
+
+    .comments_cart_img {
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    p {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      width: 343px;
+    }
+  }
+}

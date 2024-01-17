@@ -1,0 +1,10 @@
+.main_section {
+  background-image: url("main_section/main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: 100vh;
+  position: relative;
+}
+
+/*# sourceMappingURL=main.css.map */

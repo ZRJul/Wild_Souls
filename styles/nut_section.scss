@@ -1,0 +1,208 @@
+@import "mixins";
+
+.nut_section {
+  background-color: #ED7B49;
+
+  @include max-screen(931px) {
+    flex-wrap: wrap;
+  }
+
+  .nut_content {
+    border-radius: 0 220px 0 0;
+    background-color: #BE5A4B;
+    max-width: 815px;
+    padding-top: 94px;
+    padding-bottom: 74px;
+
+    h3 {
+      margin-left: 165px;
+      @include roboto_font;
+      color: $main_color;
+      font-size: 85px;
+      font-weight: 700;
+      line-height: 93.5px;
+      margin-bottom: 45px;
+
+      @include max-screen(1300px) {
+        margin-left: 100px;
+      }
+
+      @include max-screen(950px) {
+        font-size: 65px;
+        line-height: 73px;
+      }
+
+      @include max-screen(656px) {
+        margin-left: 20px;
+      }
+
+      @include max-screen(480px) {
+        font-size: 45px;
+        line-height: 53px;
+      }
+    }
+
+    .nut_photo {
+      margin-left: 150px;
+      position: relative;
+
+      @include max-screen(1300px) {
+        margin-left: 85px;
+      }
+
+      @include max-screen(656px) {
+        margin-left: 20px;
+      }
+
+      @include max-screen(565px) {
+       flex-wrap: wrap;
+      }
+
+      .nut_photo_text {
+        padding-left: 15px;
+        max-width: 277px;
+
+        @include max-screen(565px) {
+          order: 2;
+          margin: auto;
+        }
+
+        h4 {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 42px;
+          font-weight: 700;
+          line-height: 50.4px;
+          margin-bottom: 14px;
+        }
+
+        p {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          max-width: 234px;
+          margin-bottom: 20px;
+        }
+
+        h5 {
+          @include roboto_font;
+          color: $main_color;
+          font-size: 21px;
+          font-weight: 400;
+          line-height: 31.5px;
+          margin-bottom: 46px;
+        }
+
+        a {
+          @include roboto_font;
+          color: #FFF;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 30px;
+          text-decoration: none;
+          background-color: #000;
+          border-radius: 40px;
+          padding: 10px 62px;
+        }
+      }
+
+      .nut_photo_img {
+        width: 350px;
+        margin-left: 19px;
+        margin-right: 19px;
+        z-index: 2;
+
+        @include max-screen(565px) {
+          order: 1;
+          margin: auto;
+        }
+
+        @include max-screen(400px) {
+          width: 300px;
+        }
+
+        .img_nut {
+          width: 100%;
+
+          @include max-screen(565px) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .img_nut_icon {
+        position: absolute;
+        z-index: 1;
+        right: 34px;
+        top: -96px;
+
+        @include max-screen(565px) {
+          right: 104px;
+        }
+
+        @include max-screen(500px) {
+          right: 84px;
+        }
+
+        @include max-screen(500px) {
+          right: 54px;
+        }
+      }
+    }
+  }
+
+  .nut_description {
+    margin-top: 88px;
+    margin-left: 110px;
+    width: 255px;
+    padding: 3px 15px;
+
+    @include max-screen(1100px) {
+      margin-left: 50px;
+    }
+
+    @include max-screen(931px) {
+      padding-top: 50px;
+      margin: auto;
+    }
+
+    h5 {
+      @include roboto_font;
+      color: $main_color;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 31.5px;
+      margin-bottom: 92px;
+
+      @include max-screen(650px) {
+        margin-bottom: 52px;
+      }
+    }
+
+    h4 {
+      list-style: none;
+      @include roboto_font;
+      color: $main_color;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 50.4px;
+      border-bottom: #000000 solid 1px;
+      margin-bottom: 40px;
+
+      @include max-screen(650px) {
+        margin-bottom: 20px;
+      }
+
+      span {
+        @include roboto_font;
+        color: $main_color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 0;
+        vertical-align: super;
+      }
+    }
+  }
+}

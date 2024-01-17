@@ -1,0 +1,176 @@
+@import "mixins";
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    @include roboto_font;
+    color: $main_color;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 24px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+
+    &:hover {
+      background-size: 100% 2px;
+    }
+  }
+
+  .container {
+    width: 1140px;
+    margin: auto;
+    padding: 30px 15px 33px 15px;
+    justify-content: space-between;
+
+    ul {
+      gap: 42px;
+    }
+
+    .header_first_menu {
+      padding-left: 16px;
+      padding-right: 26px;
+
+      a {
+        font-size: 15px;
+      }
+    }
+
+    .header_second_menu {
+      padding-left: 16px;
+      padding-right: 26px;
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .header_lang {
+    margin-top: 30px;
+    margin-right: 31px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .header_burger {
+    display: none;
+
+    &:before, &:after {
+      content: '';
+      background-color: $main_color;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    span {
+      background-color: $main_color;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 9px;
+      transition: all 0.3s ease 0s;
+    }
+
+    @include max-screen(767px) {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+
+    &.active {
+      &:before {
+        content: "";
+        transform: rotate(45deg);
+        top: 9px;
+      }
+
+      &:after {
+        content: "";
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+
+      span {
+        transform: scale(0);
+      }
+    }
+  }
+
+  .header_menu {
+    @include max-screen(767px) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease 0s;
+      overflow: auto;
+    }
+
+    &.active {
+      top: 0;
+      background-color: #ED7B49;
+    }
+  }
+}
+
+@include max-screen(767px) {
+  header {
+    justify-content: space-between;
+
+    .container {
+      display: block;
+      padding-top: 50px;
+      text-align: center;
+
+      ul {
+        display: block;
+      }
+    }
+
+    .header_lang {
+      margin-top: 10px;
+    }
+  }
+}
+
+@include screen(767px, 900px){
+  header{
+    .container{
+      ul {
+        gap: 15px;
+      }
+    }
+  }
+}

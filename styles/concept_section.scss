@@ -1,0 +1,200 @@
+@import "mixins";
+
+.concept_section{
+  padding-top: 251px;
+  padding-bottom: 421px;
+  background-color: #F5AFB9;
+
+  @include max-screen(1201px) {
+    padding-top: 150px;
+  }
+
+  @include max-screen(850px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  .container{
+    margin: auto;
+    position: relative;
+
+    @include max-screen(850px) {
+      display: block;
+      text-align: center;
+    }
+
+    .concept_icon{
+      position: absolute;
+      top: -180px;
+      left: 196px;
+
+      @include max-screen(1221px) {
+        left: 100px;
+      }
+
+      img{
+        @include max-screen(850px) {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    }
+
+    .concept_content{
+      max-width: 365px;
+      padding-top: 140px;
+      padding-left: 15px;
+
+      @include max-screen(950px) {
+        padding-top: 114px;
+      }
+
+      @include max-screen(850px) {
+        margin: auto;
+        padding-bottom: 80px;
+        padding-top: 0;
+        padding-left: 0;
+      }
+
+      h3{
+        @include roboto_font;
+        color: $main_color;
+        font-size: 85px;
+        font-weight: 700;
+        line-height: 93.5px;
+        margin-bottom: 13px;
+
+        @include max-screen(950px) {
+          font-size: 65px;
+          line-height: 73px;
+        }
+
+        @include max-screen(480px) {
+          font-size: 45px;
+          line-height: 53px;
+        }
+      }
+
+      p{
+        @include roboto_font;
+        color: $main_color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 47px;
+      }
+
+      a{
+        text-decoration: none;
+        border-radius: 32px;
+        padding: 10px 74px;
+        background: #000;
+        @include roboto_font;
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    .concept_slide{
+      position: relative;
+      padding-right: 110px;
+
+      @include max-screen(560px) {
+        padding-right: 90px;
+      }
+      @include max-screen(520px) {
+        padding-right: 0;
+        margin-left: 40px;
+      }
+
+      .slide_photo {
+        width: 540px;
+        height: 657px;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 150px);
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 100;
+
+        @include max-screen(1220px) {
+          width: 480px;
+          height: 600px;
+          padding-right: 15px;
+        }
+
+        @include max-screen(1100px) {
+          width: 380px;
+          height: 500px;
+        }
+
+        @include max-screen(930px) {
+          width: 330px;
+          height: 450px;
+        }
+
+        @include max-screen(520px) {
+          width: 260px;
+          height: 380px;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-15deg);
+          position: relative;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(15deg);
+        }
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .bottom {
+        z-index: 50;
+        animation: move;
+      }
+
+      .bottom_last {
+        z-index: 30;
+        animation: move_last;
+      }
+
+      @keyframes move {
+        0% {
+          transform: translateY(0);
+          z-index: 150;
+        }
+        50% {
+          transform: translateY(220px);
+        }
+        100% {
+          transform: translateY(0);
+          z-index: 50;
+        }
+      }
+
+      @keyframes move_last {
+        0% {
+          transform: translateY(0);
+          z-index: 150;
+        }
+        50% {
+          transform: translateY(220px);
+          z-index: 50;
+        }
+        100% {
+          transform: translateY(0);
+          z-index: 30;
+        }
+      }
+    }
+  }
+}
+
